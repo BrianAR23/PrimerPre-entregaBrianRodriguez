@@ -35,22 +35,30 @@ if (acceso()) {
             case "1":
                 let ingresoUsd = parseInt(prompt("Ingrese saldo en dolares a invertir"));
                 let plazoUsd = parseInt(prompt("Ingrese cantidad de dias."))
-                let tna = parseFloat(0.0013 * plazoUsd)
-                let interesUsd= parseFloat(ingresoUsd * tna / 100)
-                let totalUsd= parseFloat(ingresoUsd + interesUsd)
-                alert("Interes: $" + interesUsd);
-                alert("Total: $" + totalUsd);
+                if (Number.isNaN(ingresoUsd && plazoUsd)) {
+                    alert('El valor ingresado no es un número');
+                } else {
+                    let tna = parseFloat(0.0013 * plazoUsd)
+                    let interesUsd= parseFloat(ingresoUsd * tna / 100)
+                    let totalUsd= parseFloat(ingresoUsd + interesUsd)
+                    alert("Interes: $" + interesUsd);
+                    alert("Total: $" + totalUsd);
                 break;
+                }
+                
             case "2":
                 let ingresoPes = parseInt(prompt("Ingrese saldo en pesos a invertir"));
                 let plazoPes = parseInt(prompt("Ingrese cantidad de dias."))
-                let tnaPes = parseFloat(0.32 * plazoPes)
-                let interes = parseFloat(ingresoPes * tnaPes / 100)
-                let total = parseFloat(ingresoPes + interes)
-                alert("Interes: $" + interes);
-                alert("Total: $" + total);
+                if (Number.isNaN(ingresoPes && plazoPes)) {
+                    alert('El valor ingresado no es un número');
+                } else {
+                    let tnaPes = parseFloat(0.32 * plazoPes)
+                    let interes = parseFloat(ingresoPes * tnaPes / 100)
+                    let total = parseFloat(ingresoPes + interes)
+                    alert("Interes: $" + interes);
+                    alert("Total: $" + total);
                 break;
-            
+                }
             
             default:
                 alert("Elegiste una opción incorrecta.")
