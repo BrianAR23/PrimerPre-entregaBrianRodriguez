@@ -1,6 +1,7 @@
 let pinUser = "brian123";
 let codeUser = "ariel456";
 
+//FUNCION DE LOGEO.
 function acceso() {
     let ingresar = false;
     let intentos = 3;
@@ -28,6 +29,37 @@ function acceso() {
 
 if (acceso()) {
 
+//ARRAY CON OBJETOS DE PLAZOS FIJOS.
+    const plazos = [
+        {
+            id: 0,
+            moneda: "En Dolares",
+            tna: "0,50%",
+            tea: "0,50%"
+        },
+        {
+            id: 1,
+            moneda: "En Pesos",
+            tna: "188%",
+            tea: "205,84%"
+        }
+    ];
+    
+//FUNCION PARA MOSTRAR TIPOS DE PLAZOS FIJOS.
+    const mostrarPlazos = () => {
+        let mensaje = "Tipos de Plazos Fijos:\n";
+
+//METODO DE ARRAY.
+        plazos.forEach((plazo) => {
+            mensaje += `\nPlazo: ${plazo.moneda}\n TNA: ${plazo.tna} \n TEA: ${plazo.tea} \n-----------------------\n`;
+        });
+    
+        alert(mensaje)
+    }
+
+    mostrarPlazos();
+
+//OPCIONES PARA LA ELECCION DEL USUARIO.
     let opcion = prompt("Simulador de plazo fijo. elija la opción que desee. \n1 - Plazo fijo en dolares. \n2 - Plazo fijo en pesos. \nPresione la tecla E. ");
 
     while (opcion != "e" && opcion != "E") {
@@ -38,11 +70,10 @@ if (acceso()) {
                 if (Number.isNaN(ingresoUsd && plazoUsd)) {
                     alert('El valor ingresado no es un número');
                 } else {
-                    let tna = parseFloat(0.0013 * plazoUsd)
-                    let interesUsd= parseFloat(ingresoUsd * tna / 100)
-                    let totalUsd= parseFloat(ingresoUsd + interesUsd)
-                    alert("Interes: $" + interesUsd);
-                    alert("Total: $" + totalUsd);
+                    let tna = Math.abs((0.0013 * plazoUsd))
+                    let interesUsd= Math.abs((ingresoUsd * tna / 100))
+                    let totalUsd= Math.abs((ingresoUsd + interesUsd))
+                    alert("Interes: $" + interesUsd + "\nTotal: $" + totalUsd);
                 break;
                 }
                 
@@ -52,11 +83,10 @@ if (acceso()) {
                 if (Number.isNaN(ingresoPes && plazoPes)) {
                     alert('El valor ingresado no es un número');
                 } else {
-                    let tnaPes = parseFloat(0.32 * plazoPes)
-                    let interes = parseFloat(ingresoPes * tnaPes / 100)
-                    let total = parseFloat(ingresoPes + interes)
-                    alert("Interes: $" + interes);
-                    alert("Total: $" + total);
+                    let tnaPes = Math.abs((0.32 * plazoPes))
+                    let interes = Math.abs((ingresoPes * tnaPes / 100))
+                    let total = Math.abs((ingresoPes + interes))
+                    alert("Interes: $" + interes + "\nTotal: $" + total);
                 break;
                 }
             
