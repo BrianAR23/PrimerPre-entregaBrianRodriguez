@@ -2,97 +2,190 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Librería de Bootstraps-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Estilo CSS-->
     <link rel="stylesheet" href="./css/estilo.css">
-    <title>Document</title>
-    
+    <title>DivCom.</title>
 </head>
 <body>
-
+    
     <header>
-
+        <h1 class="titulo-header">
+            DiviComb.
+        </h1>
         <nav>
-
-            <h1>
-                Banco Garrón
-            </h1>
-
-            <ul class="menu">
+            <ul>
                 <li>
-                    <a href="">Inicio</a>
+                    <a href="">INICIO</a>
                 </li>
                 <li>
-                    <a href="">Contacto</a>
+                    <a href="">COTIZACIONES</a>
                 </li>
                 <li>
-                    <a href="">Menu</a>
+                    <a href="">CONTACTO</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main id="root">
-        <section class="infor">
+    <img src="./assets/signo-dolar-icono-plano-ilustracion-vectorial_686498-432.avif" alt="" class="imagen">
 
-            <h2>
-                Plazo Fijo Electronico.
-            </h2>
+    <h1 class="titulo-web">
+        Conversor de Divisa
+    </h1>
+    <h4 class="h4-subtittle">
+        Escoje el tipo de divisa y la cantidad que deseas convertir.
+    </h4>
+    
+    <div class="container">
+        <div class="moneda">
+            <select id="moneda-uno">
+                <option value="AED">AED</option>
+                <option value="ARS">ARS</option>
+                <option value="AUD">AUD</option>
+                <option value="BGN">BGN</option>
+                <option value="BRL">BRL</option>
+                <option value="BSD">BSD</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CLP">CLP</option>
+                <option value="CNY">CNY</option>
+                <option value="COP">COP</option>
+                <option value="CZK">CZK</option>
+                <option value="DKK">DKK</option>
+                <option value="DOP">DOP</option>
+                <option value="EGP">EGP</option>
+                <option value="EUR">EUR</option>
+                <option value="FJD">FJD</option>
+                <option value="GBP">GBP</option>
+                <option value="GTQ">GTQ</option>
+                <option value="HKD">HKD</option>
+                <option value="HRK">HRK</option>
+                <option value="HUF">HUF</option>
+                <option value="IDR">IDR</option>
+                <option value="ILS">ILS</option>
+                <option value="INR">INR</option>
+                <option value="ISK">ISK</option>
+                <option value="JPY">JPY</option>
+                <option value="KRW">KRW</option>
+                <option value="KZT">KZT</option>
+                <option value="MXN">MXN</option>
+                <option value="MYR">MYR</option>
+                <option value="NOK">NOK</option>
+                <option value="NZD">NZD</option>
+                <option value="PAB">PAB</option>
+                <option value="PEN">PEN</option>
+                <option value="PHP">PHP</option>
+                <option value="PKR">PKR</option>
+                <option value="PLN">PLN</option>
+                <option value="PYG">PYG</option>
+                <option value="RON">RON</option>
+                <option value="RUB">RUB</option>
+                <option value="SAR">SAR</option>
+                <option value="SEK">SEK</option>
+                <option value="SGD">SGD</option>
+                <option value="THB">THB</option>
+                <option value="TRY">TRY</option>
+                <option value="TWD">TWD</option>
+                <option value="UAH">UAH</option>
+                <option value="USD" selected>USD</option>
+                <option value="UYU">UYU</option>
+                <option value="VND">VND</option>
+                <option value="ZAR">ZAR</option>
 
-            <p>
-                Que un horario no limite tus inversiones. Podés generar, consultar y/o modificar depósitos a plazo fijo a través de nuestra App BNA+, Home Banking o de cualquier Cajero Automático de la Red Link.
-            </p>
+            </select>
 
-        </section>
+            <input 
+            type="number" 
+            id="cantidad-uno" 
+            placeholder="0"  
+            value="1"
+            >
 
-        <section>
+        </div>
 
-            <h2>
-                Beneficios.
-            </h2>
+        <div class="taza-cambio-container">
+            <button class="btn" id="taza">
+                cambio
+            </button>
 
-            <div class="uno">
-                <ul class="beneficios">
-                    <li>
-                        <strong>Comodidad. </strong>Accedé desde tu hogar a través de nuestra App BNA+, de Home Banking o desde cualquier Cajero Automático de la Red Link sin necesidad de movilizarte hasta una sucursal en horario bancario.
-                    </li>
-                    <br>
-                    <li>
-                        <strong>Agilidad.</strong>Brinda información actualizada sobre plazos y tasas vigentes para las distintas modalidades de plazo fijo.
-                    </li>
-                    <br>
-                    <li>
-                        <strong>Fácil y seguro.</strong>Evita el traslado de efectivo. Las operaciones se realizan con el máximo nivel de seguridad.
-                    </li>
-                    <br>
-                    <li>
-                        <strong>Disponibilidad.</strong>Días hábiles de 5:00 a 22:00. Sin restricciones en la utilización del servicio, toda vez que lo necesites, sin costo alguno.
-                    </li>
-                    <br>
-                </ul>
-            </div>
-        </section>
+            <div class="cambio" id="cambio"></div>
 
-        <section class="sectres">
-            <div class="buton">
-                <button type="submit">Plazo fijo en pesos.</button>
-                <button type="submit">Plazo fijo en dolares.</button>
-            </div>
-        </section>
+        </div>
 
-        <form action="" class="form-container" id="form">
-            <div class="form-container-header">
-                <h2>Consulta para otras gestiones.</h2>
-            </div>
-            <div class="form-container-inputs"></div>
+        <div class="moneda">
+            <select id="moneda-dos">
+                <option value="AED">AED</option>
+                <option value="ARS">ARS</option>
+                <option value="AUD">AUD</option>
+                <option value="BGN">BGN</option>
+                <option value="BRL">BRL</option>
+                <option value="BSD">BSD</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CLP">CLP</option>
+                <option value="CNY">CNY</option>
+                <option value="COP">COP</option>
+                <option value="CZK">CZK</option>
+                <option value="DKK">DKK</option>
+                <option value="DOP">DOP</option>
+                <option value="EGP">EGP</option>
+                <option value="EUR" selected>EUR</option>
+                <option value="FJD">FJD</option>
+                <option value="GBP">GBP</option>
+                <option value="GTQ">GTQ</option>
+                <option value="HKD">HKD</option>
+                <option value="HRK">HRK</option>
+                <option value="HUF">HUF</option>
+                <option value="IDR">IDR</option>
+                <option value="ILS">ILS</option>
+                <option value="INR">INR</option>
+                <option value="ISK">ISK</option>
+                <option value="JPY">JPY</option>
+                <option value="KRW">KRW</option>
+                <option value="KZT">KZT</option>
+                <option value="MXN">MXN</option>
+                <option value="MYR">MYR</option>
+                <option value="NOK">NOK</option>
+                <option value="NZD">NZD</option>
+                <option value="PAB">PAB</option>
+                <option value="PEN">PEN</option>
+                <option value="PHP">PHP</option>
+                <option value="PKR">PKR</option>
+                <option value="PLN">PLN</option>
+                <option value="PYG">PYG</option>
+                <option value="RON">RON</option>
+                <option value="RUB">RUB</option>
+                <option value="SAR">SAR</option>
+                <option value="SEK">SEK</option>
+                <option value="SGD">SGD</option>
+                <option value="THB">THB</option>
+                <option value="TRY">TRY</option>
+                <option value="TWD">TWD</option>
+                <option value="UAH">UAH</option>
+                <option value="USD">USD</option>
+                <option value="UYU">UYU</option>
+                <option value="VND">VND</option>
+                <option value="ZAR">ZAR</option>
 
-        </form>
-    </main>
+            </select>
+
+            <input 
+            type="number" 
+            id="cantidad-dos" 
+            placeholder="0"  
+            >
+
+        </div>
+    </div>
 
     <footer>
-        <h3>Gestiones Comerciales.</h3>
-        <h3>Politica de Privacidad.</h3>
+        <h4>@Consultate our company for more information.</h4>
     </footer>
-    <script type="module" src="./js/script.js"></script>
+
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

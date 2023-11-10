@@ -1,3 +1,7 @@
+:root{
+    --primary-color:#3c7db6
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -5,180 +9,121 @@
 }
 
 body{
-    background-color: antiquewhite;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #d0e9ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    
 }
 
-main{
-    margin-left: 20px;
-    margin-right: 20px;
+nav{
+    margin: 25px;
+}
+
+.titulo-header{
+    color: white;
+}
+
+.h4-subtittle{
+    color: #15538a;
 }
 
 header{
     width: 100vw;
-    height: 15vh;
-    padding: 20px;
-    background-color: darkcyan;
-    color: aliceblue;;
-}
-
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.menu{
-    width: 200px;
-    height: 35px;
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    margin: 15px;
-}
-
-.beneficios{
-    list-style: none;
-    margin-block-end: 15px;
-}
-
-a{  
-    margin: 0px;
-    padding: 10px;
-    text-decoration: none;
-    background-color: rgb(0, 100, 100);
-    color: aliceblue;
-}
-
-a:hover{
-    background-color: darkcyan;
-}
-
-section{
-    margin: 20px;
-    padding: 20px
-}
-
-h2{
-    margin-block-end: 15px;
-    color:darkslategray;
-}
-
-.uno{
-    width: 90vw;
-    height: 40vh;
-    padding: 20px;
-    text-align: justify;
-    background-color: rgb(190, 190, 190);
-    border: 2px solid gray;
-}
-
-.buton{
-    width: 100vw;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-}
-
-button{
-    width: 220px;
-    border-radius: 10px;
-}
-
-button:hover{
-    background-color: gray;
-    color: aliceblue;
-}
-
-footer{
-    width: auto;
-    background-color: darkcyan;
-    color: aliceblue;
-    display: flex;
-    justify-content: space-around;
-    padding: 30px;
-}
-
-.card-container {
-    margin-top: 3rem;
-    padding: 1rem;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.card-content {
-    padding: 10px;
-    display: flex;
-    min-width: 320px;
-    width: 30%;
-    box-shadow: rgb(216, 182, 139) 3px 3px 3px, #ffa1f62d 0px 0px 0px 1px;
-}
-
-.form-container {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 5px;
-    padding: 1rem;
-    margin: 1rem;
-}
-
-.form-container-header {
-    width: 100%;
-}
-
-.form-container-inputs{
-    width: 100%;
+    height: 12vh;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
+    align-items: center;
+    padding: 30px;
+    background-color: var(--primary-color);
 }
 
-.form-container-inputs div {
+ul{
     display: flex;
-    flex-direction: column;
-    min-width: 300px;
-    width: 48%;
-
+    background-color: #15538a;
+    padding: 12px;
+    border-radius: 5px;
+    list-style: none;
 }
 
-.form-container-inputs div label{
-    font-size: 1.2rem;
-}
-.form-container-inputs div input {
-    height: 40px;
+a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
     padding: 5px;
 }
 
-.paseo-content{
-    margin:  0 auto;
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    background-color: #fff;
-    justify-content: space-between;
-    padding: 1rem;
-    gap: 1rem;
+.imagen{
+    width: 180px;
+    border-radius: 100px;
+    margin: 30px;
 }
 
-.paseo-content-rigth{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.titulo-web{
+    color: var(--primary-color);
 }
 
-.paseo-content-rigth button {
-    background-color: rgb(164, 8, 8);
-    color: #fff;
-    border: none;
-    outline: none;
-    font-size: 1.4rem;
-    padding: 10px;
+p{
+    text-align: center;
+    padding: 20px;
+}
+
+.btn{
+    color: #d0e9ff;
+    background-color: var(--primary-color);
     cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 5px 12px;
+}
+
+.moneda{
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.moneda select{
+    height: 40px;
+    padding: 10px 20px 10px 10px;
+    border: 2px solid #c3d0db;
+    border-radius: 5px;
+    font-size: 15px;   
+}
+
+.moneda input{
+    border: 0;
+    border-radius: 5px;
+    font-size: 32px;
+    text-align: right;
+    
+}
+
+.taza-cambio-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cambio{
+    color: var(--primary-color);
+    font-size: 15px;
+    padding: 10px;
+    
+}
+
+select:focus, input:focus, button:focus{
+    outline: 0;
+}
+
+footer{
+    background-color: var(--primary-color);
+    width: 100vw;
+    height: 12vh;
+    text-align: center;
+    padding: 30px;
 }
