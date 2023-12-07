@@ -38,7 +38,6 @@ function getStoredData() {
     const storedMonedaTwo = localStorage.getItem('moneda_two');
     const storedCantidadOne = localStorage.getItem('cantidad_one');
 
-    
 }
 
 // Fetch Exchange rate y DOM
